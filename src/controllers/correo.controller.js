@@ -32,7 +32,7 @@ export const enviarCorreo = async(req, res) => {
         const fecha= new Date();
         const { destinatario, titulo, mensaje,  idusuario } = req.body;
          await transporter.sendMail({
-            from: '"PRUEBA EMAIL 👻" <christianatencio@upeu.edu.pe>', // sender address
+            from: ' <christianatencio@upeu.edu.pe>', // sender address
             to: destinatario, // list of receivers
             subject: titulo +" - " +fecha, // Subject line
             html: "<p>"+ mensaje +"</p>"  // html body
